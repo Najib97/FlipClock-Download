@@ -70,11 +70,11 @@ FlipClock memeriksa versi baru secara otomatis. Kalau ada, tombol **⬆ Update**
 | **9 tema Pro** (3 Doodle baru, Emas, Hijau Masjid, Kayu, Terminal, Aurora) + editor tema | | ✅ |
 | Suara flip & bel tiap jam | | ✅ |
 
-### 💛 Dapatkan Pro, bayar seikhlasnya
+### 💙 Aktifkan Pro & dukung developer
 
-Buka FlipClock → ⚙ **Pengaturan → Lisensi → 🛒 Beli Pro**:
+Buka FlipClock → ⚙ **Pengaturan → Lisensi → 💙 Dukung developer**:
 
-1. Isi nominal **seikhlasnya** (minimal Rp1.000). QRIS dengan nominal itu langsung muncul.
+1. Isi nominal dukungan untuk developer (minimal Rp1). QRIS dengan nominal itu langsung muncul.
 2. Scan dan bayar dari m-banking atau e-wallet apa saja (GoPay, OVO, DANA, ShopeePay, BCA, dan lainnya).
 3. Klik **Kirim bukti via WhatsApp**, lalu lampirkan screenshot bukti bayar.
 4. Kunci lisensi dikirim balik lewat WhatsApp. Tempel di kolom kunci, lalu klik **Aktifkan Pro**.
