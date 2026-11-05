@@ -23,7 +23,7 @@
 <img src="https://img.shields.io/badge/bahasa-Indonesia-e0524e?style=flat-square" alt="Bahasa Indonesia" />
 <img src="https://img.shields.io/badge/RAM-%C2%B190%20MB-6ee7b7?style=flat-square" alt="RAM ±90 MB" />
 
-<a href="https://github.com/Najib97/FlipClock-Download/releases">Semua versi & catatan rilis</a>
+🌐 <a href="https://najib97.github.io/FlipClock-Download/"><b>najib97.github.io/FlipClock-Download</b></a> · <a href="https://github.com/Najib97/FlipClock-Download/releases">Semua versi & catatan rilis</a>
 
 <br/><br/>
 
