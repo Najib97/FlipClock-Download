@@ -181,6 +181,38 @@
     .orn, .underline path { animation: none; stroke-dashoffset: 0; }
     .card.flip .flap { animation-duration: .01s !important; animation-delay: 0s !important; }
   }
+
+  /* ---------- gambar bisa diklik (lightbox) & tampilan HP lebih hidup ---------- */
+  .shot img, .theme img { cursor: zoom-in; }
+  .shot .frame { animation: shot-float 7s ease-in-out infinite; }
+  @keyframes shot-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+  .theme { transition: transform .45s cubic-bezier(.32,1.35,.5,1), border-color .2s; }
+  .theme:hover { transform: translateY(-4px) rotate(-.6deg); border-color: var(--accent); }
+  .zoom-hint { position: absolute; right: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 10px; font: 600 11px var(--mono); color: var(--text); background: rgba(13,34,64,.75); border: 1px solid var(--line); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); pointer-events: none; }
+  .zoom-hint svg { width: 14px; height: 14px; }
+  .frame { position: relative; }
+  @media (max-width: 760px) {
+    .hero { padding-top: 40px; }
+    .clock { margin-bottom: 30px; }
+    /* galeri tema jadi carousel geser */
+    .themes { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin: 0 -24px; padding: 6px 24px 18px; scrollbar-width: none; }
+    .themes::-webkit-scrollbar { display: none; }
+    .theme { flex: none; width: 78vw; scroll-snap-align: center; }
+    .features { grid-template-columns: 1fr; }
+    .feature { padding: 20px; }
+    footer { padding-bottom: 96px; }
+  }
+  .sticky-cta { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 20; display: none; padding: 8px; border-radius: 20px;
+    background: rgba(18,43,78,.72); border: 1px solid rgba(124,196,255,.3); backdrop-filter: blur(14px) saturate(1.5); -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    box-shadow: 0 14px 34px -12px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.2); translate: 0 140%; transition: translate .55s cubic-bezier(.32,1.35,.5,1); }
+  .sticky-cta.on { translate: 0 0; }
+  .sticky-cta .btn { width: 100%; justify-content: center; padding: 13px 16px; box-shadow: 3px 3px 0 var(--chalk); }
+  @media (max-width: 760px) { .sticky-cta { display: block; } }
+  .reveal { transition: opacity .7s ease, transform .8s cubic-bezier(.32,1.25,.5,1); }
+  @media (prefers-reduced-motion: reduce) {
+    .shot .frame { animation: none; }
+    .sticky-cta, .theme { transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -236,7 +268,8 @@
     </span>
     <div class="frame">
       <div class="bar"><i></i><i></i><i></i><small>FLIPCLOCK</small></div>
-      <img src="images/doodle.png" alt="Tampilan FlipClock tema Doodle Blueprint: jam flip, tanggal, cuaca, dan jadwal sholat" width="1084" height="575" />
+      <img src="images/doodle.png" alt="Tampilan FlipClock tema Doodle Blueprint: jam flip, tanggal, cuaca, dan jadwal sholat" width="1084" height="575" data-zoom="fc" />
+      <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg>ketuk untuk zoom</span>
     </div>
   </figure>
 </header>
@@ -264,12 +297,12 @@
     <p>Dari klasik yang tenang sampai doodle yang hangat.</p>
   </div>
   <div class="themes reveal">
-    <figure class="theme"><img src="images/classic.png" alt="Tema Klasik Gelap" loading="lazy" /><figcaption><b>Klasik Gelap</b><span class="pill">Gratis</span></figcaption></figure>
-    <figure class="theme"><img src="images/paper.png" alt="Tema Kertas Terang" loading="lazy" /><figcaption><b>Kertas Terang</b><span class="pill">Gratis</span></figcaption></figure>
-    <figure class="theme"><img src="images/retro.png" alt="Tema Retro 70-an" loading="lazy" /><figcaption><b>Retro 70-an</b><span class="pill">Gratis</span></figcaption></figure>
-    <figure class="theme"><img src="images/masjid.png" alt="Jam Masjid tema Hijau Masjid" loading="lazy" /><figcaption><b>Jam Masjid</b><span class="pill pro">Pro</span></figcaption></figure>
-    <figure class="theme"><img src="images/world.png" alt="Jam Dunia tema Emas Mewah" loading="lazy" /><figcaption><b>Emas Mewah</b><span class="pill pro">Pro</span></figcaption></figure>
-    <figure class="theme"><img src="images/timer.png" alt="Timer tema Doodle Papan Kapur" loading="lazy" /><figcaption><b>Doodle Papan Kapur</b><span class="pill pro">Pro</span></figcaption></figure>
+    <figure class="theme"><img src="images/classic.png" alt="Tema Klasik Gelap" loading="lazy" data-zoom="fc" /><figcaption><b>Klasik Gelap</b><span class="pill">Gratis</span></figcaption></figure>
+    <figure class="theme"><img src="images/paper.png" alt="Tema Kertas Terang" loading="lazy" data-zoom="fc" /><figcaption><b>Kertas Terang</b><span class="pill">Gratis</span></figcaption></figure>
+    <figure class="theme"><img src="images/retro.png" alt="Tema Retro 70-an" loading="lazy" data-zoom="fc" /><figcaption><b>Retro 70-an</b><span class="pill">Gratis</span></figcaption></figure>
+    <figure class="theme"><img src="images/masjid.png" alt="Jam Masjid tema Hijau Masjid" loading="lazy" data-zoom="fc" /><figcaption><b>Jam Masjid</b><span class="pill pro">Pro</span></figcaption></figure>
+    <figure class="theme"><img src="images/world.png" alt="Jam Dunia tema Emas Mewah" loading="lazy" data-zoom="fc" /><figcaption><b>Emas Mewah</b><span class="pill pro">Pro</span></figcaption></figure>
+    <figure class="theme"><img src="images/timer.png" alt="Timer tema Doodle Papan Kapur" loading="lazy" data-zoom="fc" /><figcaption><b>Doodle Papan Kapur</b><span class="pill pro">Pro</span></figcaption></figure>
   </div>
 </section>
 
@@ -314,6 +347,13 @@
     Download FlipClock
   </a>
   <p class="meta" style="margin-top:18px"><span>Windows 10/11 64-bit</span><span>Update otomatis</span></p>
+</div>
+
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock-Setup.exe">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+    Download untuk Windows
+  </a>
 </div>
 
 <footer>
@@ -373,6 +413,18 @@
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), { passive: true });
+
+  // ----- bilah download di HP: muncul setelah tombol download hero lewat, sembunyi di bagian penutup -----
+  const cta = document.querySelector('.sticky-cta');
+  const dl = document.getElementById('download');
+  const akhir = document.querySelector('.final');
+  const cekCta = () => {
+    const r = akhir.getBoundingClientRect();
+    cta.classList.toggle('on', dl.getBoundingClientRect().bottom < 0 && !(r.top < innerHeight && r.bottom > 0));
+  };
+  addEventListener('scroll', cekCta, { passive: true });
+  cekCta();
 </script>
+<script src="lightbox.js" defer></script>
 </body>
 </html>
