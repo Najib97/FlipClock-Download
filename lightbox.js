@@ -21,7 +21,7 @@
     '.lb-cap{max-width:min(560px,70vw);padding:8px 14px;border-radius:12px;background:rgba(18,43,78,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#e4eefa;font:500 13px/1.4 system-ui;text-align:center}' +
     '.lb-count{font:600 12px ui-monospace,monospace;color:#a9beda;padding:0 6px}' +
     '.lb-nav{position:absolute;top:50%;translate:0 -50%;z-index:2}.lb-prev{left:12px}.lb-next{right:12px}' +
-    '.lb-hint{position:absolute;bottom:calc(max(18px,env(safe-area-inset-bottom)) + 58px);left:50%;translate:-50% 0;z-index:2;color:#a9beda;font:500 12px system-ui;opacity:0;transition:opacity .4s .5s;pointer-events:none;white-space:nowrap}' +
+    '.lb-hint{position:absolute;top:calc(max(14px,env(safe-area-inset-top)) + 12px);left:50%;translate:-50% 0;z-index:2;color:#a9beda;font:500 12px system-ui;opacity:0;transition:opacity .4s .5s;pointer-events:none;white-space:nowrap}' +
     '.lb.on .lb-hint{opacity:1}.lb.zoomed .lb-hint{opacity:0;transition-delay:0s}' +
     '@media (max-width:640px){.lb-nav{display:none}}' +
     '[data-zoom]{cursor:zoom-in}';
