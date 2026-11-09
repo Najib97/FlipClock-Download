@@ -200,19 +200,46 @@
     .theme { flex: none; width: 78vw; scroll-snap-align: center; }
     .features { grid-template-columns: 1fr; }
     .feature { padding: 20px; }
-    footer { padding-bottom: 96px; }
   }
-  .sticky-cta { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 20; display: none; padding: 8px; border-radius: 20px;
-    background: rgba(18,43,78,.72); border: 1px solid rgba(124,196,255,.3); backdrop-filter: blur(14px) saturate(1.5); -webkit-backdrop-filter: blur(14px) saturate(1.5);
-    box-shadow: 0 14px 34px -12px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.2); translate: 0 140%; transition: translate .55s cubic-bezier(.32,1.35,.5,1); }
-  .sticky-cta.on { translate: 0 0; }
-  .sticky-cta .btn { width: 100%; justify-content: center; padding: 13px 16px; box-shadow: 3px 3px 0 var(--chalk); }
-  @media (max-width: 760px) { .sticky-cta { display: block; } }
   .reveal { transition: opacity .7s ease, transform .8s cubic-bezier(.32,1.25,.5,1); }
   @media (prefers-reduced-motion: reduce) {
     .shot .frame { animation: none; }
-    .sticky-cta, .theme { transition: none; }
+    .theme { transition: none; }
   }
+
+  /* ---------- tombol cepat (HP): kecil, tidak menutupi konten ---------- */
+  .qa { position: fixed; right: calc(16px + env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 40; display: none;
+    transition: translate .5s cubic-bezier(.32,1.35,.5,1), opacity .25s, scale .5s cubic-bezier(.32,1.35,.5,1); }
+  .qa.off { translate: 0 120px; opacity: 0; scale: .6; pointer-events: none; }
+  .qa-btn { position: relative; width: 62px; height: 62px; border-radius: 50%; border: 2px solid var(--accent-ink); cursor: pointer; padding: 0; display: grid; place-items: center;
+    background: radial-gradient(circle at 32% 26%, rgba(255,255,255,.55) 0 16%, transparent 45%), var(--accent); color: var(--accent-ink);
+    box-shadow: 4px 4px 0 var(--chalk), 0 12px 26px -8px rgba(31,178,236,.7); transition: transform .35s cubic-bezier(.32,1.45,.5,1), box-shadow .2s; }
+  .qa-btn:active { transform: scale(.9); }
+  /* cincin cahaya berdenyut */
+  .qa-btn::before, .qa-btn::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--accent); opacity: 0; pointer-events: none; animation: qa-ring 2.6s ease-out infinite; }
+  .qa-btn::after { animation-delay: 1.3s; }
+  @keyframes qa-ring { 0% { scale: 1; opacity: .7; } 100% { scale: 1.7; opacity: 0; } }
+  .qa.open .qa-btn::before, .qa.open .qa-btn::after { animation: none; }
+  .qa-btn svg { width: 26px; height: 26px; }
+  /* goyang sekali saat pertama muncul */
+  .qa.hello .qa-btn { animation: qa-hello .9s cubic-bezier(.32,1.45,.5,1); }
+  @keyframes qa-hello { 0% { rotate: 0deg; scale: .4; } 40% { rotate: -14deg; scale: 1.12; } 60% { rotate: 10deg; } 80% { rotate: -4deg; } 100% { rotate: 0deg; scale: 1; } }
+  /* percikan doodle */
+  .qa-spark { position: absolute; width: 12px; height: 12px; color: var(--chalk); pointer-events: none; animation: qa-tw 2.4s ease-in-out infinite; }
+  .qa-spark.s1 { top: -10px; left: -8px; } .qa-spark.s2 { bottom: 4px; left: -16px; width: 9px; animation-delay: 1.2s; }
+  .qa.open .qa-spark { opacity: 0; }
+  @keyframes qa-tw { 0%,100% { scale: .6; rotate: 0deg; opacity: .4; } 50% { scale: 1.15; rotate: 45deg; opacity: 1; } }
+  @media (max-width: 720px) { .qa { display: block; } footer { padding-bottom: 96px; } }
+  @media (prefers-reduced-motion: reduce) {
+    .qa, .qa-btn { transition: none; }
+    .qa-btn::before, .qa-btn::after, .qa-spark, .qa.hello .qa-btn { animation: none; }
+  }
+
+  /* tombol bulat yang memanjang jadi "Download" sesaat setelah muncul */
+  .qa-btn.dl { width: auto; min-width: 62px; height: 62px; border-radius: 31px; padding: 0 19px; gap: 10px; grid-auto-flow: column; text-decoration: none; }
+  .qa-btn.dl b { max-width: 0; overflow: hidden; white-space: nowrap; font: 800 15px var(--head); transition: max-width .55s cubic-bezier(.32,1.25,.5,1); }
+  .qa.wide .qa-btn.dl b { max-width: 160px; }
+  @media (prefers-reduced-motion: reduce) { .qa-btn.dl b { transition: none; } }
 </style>
 </head>
 <body>
@@ -349,10 +376,10 @@
   <p class="meta" style="margin-top:18px"><span>Windows 10/11 64-bit</span><span>Update otomatis</span></p>
 </div>
 
-<div class="sticky-cta">
-  <a class="btn btn-primary" href="https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock-Setup.exe">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-    Download untuk Windows
+<div class="qa off">
+  <svg class="qa-spark s1" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 1v10M1 6h10M2.6 2.6l1.6 1.6M9.4 9.4L7.8 7.8"/></svg><svg class="qa-spark s2" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 1v10M1 6h10"/></svg>
+  <a class="qa-btn dl" href="https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock-Setup.exe" aria-label="Download FlipClock untuk Windows">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><b>Download</b>
   </a>
 </div>
 
@@ -414,16 +441,40 @@
   const nav = document.getElementById('nav');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), { passive: true });
 
-  // ----- bilah download di HP: muncul setelah tombol download hero lewat, sembunyi di bagian penutup -----
-  const cta = document.querySelector('.sticky-cta');
-  const dl = document.getElementById('download');
-  const akhir = document.querySelector('.final');
-  const cekCta = () => {
-    const r = akhir.getBoundingClientRect();
-    cta.classList.toggle('on', dl.getBoundingClientRect().bottom < 0 && !(r.top < innerHeight && r.bottom > 0));
-  };
-  addEventListener('scroll', cekCta, { passive: true });
-  cekCta();
+  // ----- tombol cepat: sembunyi saat menggulir ke bawah (membaca), muncul lagi saat ke atas / berhenti -----
+  const qa = document.querySelector('.qa');
+  const qaHero = document.querySelector('#download');
+  const qaAkhir = document.querySelector('.final');
+  let qaY = scrollY, qaDiam = 0, qaPernah = false;
+  function qaCek(arah) {
+    const r = qaAkhir.getBoundingClientRect();
+    const boleh = qaHero.getBoundingClientRect().bottom < 0 && !(r.top < innerHeight && r.bottom > 0);
+    const tampil = boleh && (arah !== 'bawah' || qa.classList.contains('open'));
+    qa.classList.toggle('off', !tampil);
+    if (tampil && !qaPernah) { qaPernah = true; qa.classList.add('hello'); setTimeout(() => qa.classList.remove('hello'), 1000); }
+  }
+  addEventListener('scroll', () => {
+    const y = scrollY, arah = y > qaY + 4 ? 'bawah' : y < qaY - 4 ? 'atas' : null;
+    qaY = y;
+    if (arah) qaCek(arah);
+    clearTimeout(qaDiam);
+    qaDiam = setTimeout(() => qaCek('diam'), 700); // berhenti menggulir → muncul lagi
+  }, { passive: true });
+  qaCek('diam');
+
+  // memanjang jadi "Download" tiap kali muncul, lalu menciut lagi jadi bulat
+  let qaLebar = 0, qaTadiOff = true;
+  new MutationObserver(() => {
+    const off = qa.classList.contains('off');
+    if (off === qaTadiOff) return; // hanya saat berganti tersembunyi ↔ tampil
+    qaTadiOff = off;
+    if (off) return qa.classList.remove('wide');
+    qa.classList.add('wide');
+    clearTimeout(qaLebar);
+    qaLebar = setTimeout(() => qa.classList.remove('wide'), 2600);
+  }).observe(qa, { attributes: true, attributeFilter: ['class'] });
+
+
 </script>
 <script src="lightbox.js" defer></script>
 </body>
