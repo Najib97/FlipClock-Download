@@ -4,7 +4,7 @@
 
 # FlipClock
 
-**Jam flip clock untuk Windows dengan tanggal, cuaca, jadwal sholat, Jam Masjid, screensaver, dan 15 tema.**
+**Jam flip clock untuk Windows dan Android dengan tanggal, cuaca, jadwal sholat, Jam Masjid, screensaver, dan 15 tema.**
 
 <br/>
 
@@ -14,6 +14,9 @@
 &nbsp;
 <a href="https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock-Portable.exe">
   <img src="https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD-Portable-0d2240?style=for-the-badge" alt="Download Portable" height="42" />
+</a>
+<a href="https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock.apk">
+  <img src="https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD-APK%20Android-3ddc84?style=for-the-badge" alt="Download APK Android" height="42" />
 </a>
 
 <br/><br/>
@@ -39,8 +42,9 @@
 |:-:|---|:-:|---|
 | 💿 | **[FlipClock-Setup.exe](https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock-Setup.exe)** | ±91 MB | **Disarankan.** Dipasang di komputer, ada shortcut Desktop & Start Menu, **update otomatis**, dan screensaver Windows. |
 | 🎒 | **[FlipClock-Portable.exe](https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock-Portable.exe)** | ±91 MB | Langsung jalan tanpa instalasi, cocok dibawa di flashdisk atau untuk PC kantor. |
+| 📱 | **[FlipClock.apk](https://github.com/Najib97/FlipClock-Download/releases/latest/download/FlipClock.apk)** | ±0,2 MB | Untuk HP, tablet, dan TV Android 7+. Fitur & tema sama dengan versi Windows, **update otomatis di dalam aplikasi**. |
 
-**Kebutuhan:** Windows 10 atau 11 (64-bit). Internet hanya diperlukan untuk cuaca dan cek update. Jam, jadwal sholat, dan hari libur tetap jalan saat offline.
+**Kebutuhan:** Windows 10 atau 11 (64-bit), atau Android 7.0 ke atas. Internet hanya diperlukan untuk cuaca dan cek update. Jam, jadwal sholat, dan hari libur tetap jalan saat offline.
 
 ### Cara pasang
 
@@ -49,6 +53,14 @@
 3. Ikuti langkah installer. Kalau FlipClock sudah terpasang, Anda bisa memilih **Perbaiki/perbarui** atau **Hapus**.
 
 FlipClock memeriksa versi baru secara otomatis. Kalau ada, tombol **⬆ Update** muncul di toolbar.
+
+### Cara pasang di Android
+
+1. Unduh **FlipClock.apk** dari HP, lalu buka file-nya.
+2. Kalau diminta, izinkan browser/file manager **memasang aplikasi dari sumber ini**, lalu ketuk **Instal**.
+3. Ketuk layar untuk memunculkan menu, ketuk dua kali untuk layar penuh. Di Android TV, pakai tombol panah remote.
+
+Pembaruan berikutnya diunduh dan dipasang langsung dari dalam aplikasi (**⬆ Update → Unduh & pasang**). Pertama kali, Android meminta izin agar FlipClock boleh memasang pembaruan.
 
 ---
 
@@ -113,14 +125,14 @@ Buka FlipClock → ⚙ **Pengaturan → Lisensi → 💙 Dukung developer**:
 
 Gerakkan mouse untuk memunculkan toolbar, lalu pilih **⛶ Fullscreen ▾** dan pilih monitornya. Bisa juga dengan tombol `1`–`9` (monitor ke-N). Tekan `Esc` untuk keluar.
 
-Untuk tampilan berbeda di tiap monitor (Pro), buka ⚙ **Pengaturan → Layar → Multi-layar**.
+Untuk tampilan berbeda di tiap monitor (Pro), buka ⚙ **Pengaturan → Perangkat → Multi-layar**.
 </details>
 
 <details>
 <summary><b>Memasang screensaver</b></summary>
 
 1. Pasang FlipClock dengan **FlipClock-Setup.exe**.
-2. Buka ⚙ **Pengaturan → Layar → Screensaver Windows**.
+2. Buka ⚙ **Pengaturan → Perangkat → Screensaver Windows**.
 3. Isi "Mulai setelah diam (menit)", lalu klik **Pasang sebagai screensaver**.
 
 Di daftar screensaver Windows, namanya **"FlipClock Pro"**. Screensaver memakai tema dan tampilan yang sama dengan aplikasi, dan tampil di semua monitor.
