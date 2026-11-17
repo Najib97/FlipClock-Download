@@ -4,7 +4,7 @@
 
 # FlipClock
 
-**Jam flip clock untuk Windows dan Android dengan tanggal, cuaca, jadwal sholat, Jam Masjid, screensaver, dan 15 tema.**
+**Jam flip clock untuk Windows dan Android dengan tanggal, cuaca, jadwal sholat, Jam Masjid, Mode Ramadan, screensaver, dan 18 tema.**
 
 <br/>
 
@@ -21,7 +21,7 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/versi-2.2.0-1fb2ec?style=flat-square" alt="Versi 2.2.0" />
+<img src="https://img.shields.io/badge/versi-2.4-1fb2ec?style=flat-square" alt="Versi 2.4" />
 <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(64--bit)-0078d4?style=flat-square" alt="Windows 10/11 64-bit" />
 <img src="https://img.shields.io/badge/bahasa-Indonesia-e0524e?style=flat-square" alt="Bahasa Indonesia" />
 <img src="https://img.shields.io/badge/RAM-%C2%B190%20MB-6ee7b7?style=flat-square" alt="RAM ±90 MB" />
@@ -69,18 +69,23 @@ Pembaruan berikutnya diunduh dan dipasang langsung dari dalam aplikasi (**⬆ Up
 | | Gratis | Pro |
 |---|:---:|:---:|
 | Jam flip 3D, tanggal Indonesia, cuaca, maximize, fullscreen di monitor mana saja | ✅ | ✅ |
-| Waktu sholat berikutnya & hari libur nasional (dihitung offline) | ✅ | ✅ |
+| Waktu sholat berikutnya dengan cincin progres & hari libur nasional (dihitung offline) | ✅ | ✅ |
+| **Tampilan hidup**: warna langit mengikuti waktu, efek hujan/bintang/awan, animasi pergantian jam | ✅ | ✅ |
+| Ucapan momen spesial: Tahun Baru, 17 Agustus, Ramadan, Idul Fitri & Adha | ✅ | ✅ |
 | 6 tema: Klasik, Kertas, Retro, Neon, Sakura, Doodle Blueprint | ✅ | ✅ |
 | Screensaver Windows, autostart, mode malam, anti burn-in, widget mini | ✅ | ✅ |
 | **Jam Masjid**: jadwal 7 waktu, adzan, hitung mundur iqamah, layar gelap saat sholat, mode Jum'at | | ✅ |
+| **Mode Ramadan**: hitung mundur imsak & berbuka, hari ke-N puasa, alarm sahur, ucapan berbuka | | ✅ |
+| **Slide info**: pengumuman, laporan kas, petugas Jum'at, poster promo bergantian di sela jam | | ✅ |
+| **Signage toko**: papan BUKA/TUTUP otomatis + QR pembayaran di pojok layar | | ✅ |
 | **Remote dari HP**: scan QR, atur tema/tampilan/running text/timer, kirim pesan ke layar | | ✅ |
 | **Multi-layar**: tampilan berbeda di tiap monitor | | ✅ |
 | Jam Dunia, Cuaca lengkap (per jam, 7 hari, kualitas udara, peringatan hujan) | | ✅ |
-| Timer, Stopwatch, Pomodoro, Alarm | | ✅ |
+| Timer, Stopwatch, Pomodoro (dengan statistik & streak), Alarm | | ✅ |
 | Hitung mundur acara & Google Calendar | | ✅ |
 | Logo usaha, running text, jadwal layar, kunci PIN | | ✅ |
-| **9 tema Pro** (3 Doodle baru, Emas, Hijau Masjid, Kayu, Terminal, Aurora) + editor tema | | ✅ |
-| Suara flip & bel tiap jam | | ✅ |
+| **12 tema Pro**: 3 tema beranimasi baru (Tabung Nixie, Papan Bandara, Pola Islami), 3 Doodle, Emas, Hijau Masjid, Kayu, Terminal, Aurora + editor tema | | ✅ |
+| Suara flip, bel tiap jam, dan pengumuman suara ("10 menit lagi masuk waktu Dzuhur") | | ✅ |
 
 ### 💙 Aktifkan Pro & dukung developer
 
@@ -102,7 +107,7 @@ Buka FlipClock → ⚙ **Pengaturan → Lisensi → 💙 Dukung developer**:
 | ![Cuaca](images/weather.png) | ![Timer](images/timer.png) |
 
 <details>
-<summary><b>Lihat semua 15 tema & running text</b></summary>
+<summary><b>Lihat tema & running text</b></summary>
 
 ![Pilihan tema](images/themes.png)
 
