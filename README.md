@@ -70,7 +70,8 @@ Pembaruan berikutnya diunduh dan dipasang langsung dari dalam aplikasi (**⬆ Up
 |---|:---:|:---:|
 | Jam flip 3D, tanggal Indonesia, cuaca, maximize, fullscreen di monitor mana saja | ✅ | ✅ |
 | Waktu sholat berikutnya dengan cincin progres & hari libur nasional (dihitung offline) | ✅ | ✅ |
-| **Tampilan hidup**: warna langit mengikuti waktu, efek hujan/bintang/awan, animasi pergantian jam | ✅ | ✅ |
+| **Tampilan hidup**: warna langit mengikuti waktu, animasi pergantian jam | ✅ | ✅ |
+| **Efek cuaca beranimasi**: gerimis, hujan, badai petir, kabut, bulan & bintang, hujan memercik di kartu jam | | ✅ |
 | Ucapan momen spesial: Tahun Baru, 17 Agustus, Ramadan, Idul Fitri & Adha | ✅ | ✅ |
 | 6 tema: Klasik, Kertas, Retro, Neon, Sakura, Doodle Blueprint | ✅ | ✅ |
 | Screensaver Windows, autostart, mode malam, anti burn-in, widget mini | ✅ | ✅ |
